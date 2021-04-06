@@ -14,15 +14,14 @@ def show_mindmap():
     @app.callback(Output('cytoscape', 'elements'),
                   [
                       Input('cytoscape', 'tapNodeData'),
-                      Input('submit-button-state', 'n_clicks')],
-                  [
-                      State('input1', 'value'),
-                      State('input2', 'value'),
-                      State('input3', 'value'),
-                      State('input4', 'value'),
-                      State('input5', 'value'),
-                      State('input6', 'value'),
-                      State('input7', 'value')
+                      Input('submit-button-state', 'n_clicks'),
+                      Input('input1', 'value'),
+                      Input('input2', 'value'),
+                      Input('input3', 'value'),
+                      Input('input4', 'value'),
+                      Input('input5', 'value'),
+                      Input('input6', 'value'),
+                      Input('input7', 'value')
                   ]
                    )
     def update_node(tap_check, n_clicks, company, from_date, dest_date, issue_count, keyword_prob, keyword_count, industry_count):
@@ -30,7 +29,8 @@ def show_mindmap():
         if not tap_check and n_clicks == 1 and company:
             return [{'data': {'id': company, 'label': company, 'firstname': company}}]
 
-        if tap_check:
+        if tap_check or from_date or dest_date or issue_count or keyword_prob or keyword_count or industry_count:
+            print(company, from_date, dest_date, issue_count, keyword_prob, keyword_count, industry_count)
             return response(company, from_date, dest_date, float(issue_count), float(keyword_prob), int(keyword_count), industry_count)
 
         return []
