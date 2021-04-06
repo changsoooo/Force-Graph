@@ -1,0 +1,8 @@
+requests==2.25.1
+dash==1.19.0
+bs4==0.0.1
+beautifulsoup4==4.9.3
+dash-core-components==1.15.0
+dash-html-components==1.1.2
+dash-cytoscape==0.2.0
+requests==2.25.1
