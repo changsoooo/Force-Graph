@@ -55,7 +55,7 @@ notebook==6.2.0
 numpy==1.20.1
 osqp==0.6.2.post0
 packaging==20.9
-pandocfilters= s=1.4.2
+pandocfilters==1.4.2
 parso==0.8.1
 patsy==0.5.1
 pickleshare==0.7.5
