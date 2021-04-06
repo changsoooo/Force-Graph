@@ -18,6 +18,7 @@ layout = html.Div([html.Div(className='eight columns', children=[
         id='cytoscape',
         elements=[
         ],
-        layout={'name': 'concentric'}
+        layout={'name': 'concentric'},
+        style={'width': '900px', 'height': '900px'}
         )
     ])])
